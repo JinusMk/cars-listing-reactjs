@@ -1,4 +1,5 @@
 
+import { Component } from 'react'
 import { Header, BottomNavigation } from '../shared_elements'
 
 export default function pageLayoutHoc(HocComponent, extraProps = {}) {

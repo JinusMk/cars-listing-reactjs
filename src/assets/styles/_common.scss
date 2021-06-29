@@ -2,9 +2,60 @@
 
 body {
     header {
-
+        position: fixed;
+        right: 0;
+        top: 0;
+        left: 0;
+        background: $white;
+        z-index: 999;
+        width: 100%;
+        background: $primary;
+        .container{
+            max-width: 959px;
+            .headerWrapper{
+                .headerRow{
+                    padding: 24px;
+                    box-sizing: border-box;
+                    .logoBlk{
+                        float: left;
+                        h3{
+                            span{
+                                color: $white;
+                            }
+                        }
+                    }
+                    .navigationListOuterWrapper{
+                        .navigationList{
+                            justify-content: flex-end;
+                            li{
+                                .navLink{
+                                    @include transitionForAll($time: 0.4s, $transProp: ease-out);
+                                    padding: 8px 16px;
+                                    border-radius: 8px;
+                                    color: $white;
+                                    border: 1px solid $white;
+                                    &:hover, &.active{
+                                        background: $white;
+                                        color: $primary;
+                                    }
+                                }
+                                margin-right: 32px;
+                                &:last-child{
+                                    margin: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
-
+    .emptyHeaderdiv{
+        height: 69px;
+    }
+    main{
+        padding: 24px 32px;
+    }
 }
 
 @media (min-width: 0px) and ( max-width: 599px){

@@ -1,4 +1,4 @@
-import PageLayoutHoc from './pageLayoutHoc'
+import pageLayoutHoc from './pageLayoutHoc'
 
 export {
     pageLayoutHoc

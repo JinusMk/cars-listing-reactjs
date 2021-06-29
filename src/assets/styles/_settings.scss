@@ -1,0 +1,101 @@
+@import 'variable';
+
+body{
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    word-break: break-word;
+    @include fontStyle(
+        $fontFamily: $font_OpenSans,
+        $size: $font14,
+        $weight: $regularFont,
+        $color: $gray,
+        $lineHeight: 21px
+    );
+    .heading1{
+        @include fontStyle(
+          $fontFamily: $font_OpenSans,
+          $size: $font24,
+          $weight: $boldFont,
+          $color: $gray,
+          $lineHeight: 27px
+        );
+    }
+    .heading2{
+        @include fontStyle(
+          $fontFamily: $font_OpenSans,
+          $size: $font18,
+          $weight: $semiBoldFont,
+          $color: $gray,
+          $lineHeight: 24px
+        );
+    }
+    .heading3{
+        @include fontStyle(
+          $fontFamily: $font_OpenSans,
+          $size: $font16,
+          $weight: $semiBoldFont,
+          $color: $gray,
+          $lineHeight: 21px
+        );
+    }
+    .paragraph{
+        @include fontStyle(
+          $fontFamily: $font_OpenSans,
+          $size: $font14,
+          $weight: $regularFont,
+          $color: $gray,
+          $lineHeight: 21px
+        );
+    }
+    .primaryBtn{
+
+    }
+    a{
+        text-decoration: none;
+        &:hover,
+        &:active,
+        &:focus,
+        &:visited {
+            text-decoration: none;
+            cursor: pointer;
+            outline: 0;
+        }
+    }
+    .flexCentered{
+        display: flex;
+        display: -webkit-flex;
+        flex-flow: wrap;
+        -webkit-flex-flow: wrap;
+        align-items: center;
+        &:before,
+        &:after {
+          width: 0;
+        }
+    }
+    .flexNotCentered {
+        display: flex;
+        display: -webkit-flex;
+        flex-flow: wrap;
+        -webkit-flex-flow: wrap;
+        &:before,
+        &:after {
+          width: 0;
+        }
+    }
+    img {
+        max-width: 100%;
+    }
+    .container{
+        margin: 0 auto;
+        max-width: 1248px;
+    }
+    .listInline {
+        list-style: none;
+        li {
+          display: inline-block;
+          width: auto;
+        }
+    }
+}

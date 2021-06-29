@@ -1,0 +1,50 @@
+$font_OpenSans: 'Open Sans', sans-serif;;
+
+$lightFont: 300;
+$regularFont: 400;
+$mediumFont: 500;
+$semiBoldFont: 600;
+$boldFont: 700;
+
+$font14 : 14px;
+$font16: 16px;
+$font18: 18px;
+$font24: 24px;
+
+$gray: #193448;
+$blue: #0494FD;
+$white: #fff;
+$primary: #068466;
+$black: #fff;
+
+@mixin fontStyle(
+  $fontFamily: null,
+  $size: null,
+  $weight: null,
+  $color: null,
+  $lineHeight: null,
+) {
+  @if $fontFamily != null {
+    font-family: $fontFamily;
+  }
+  @if $size != null {
+    font-size: $size;
+  }
+  @if $weight != null {
+    font-weight: $weight;
+  }
+  @if $color != null {
+    color: $color;
+  }
+  @if $lineHeight != null {
+    line-height: $lineHeight;
+  }
+}
+
+@mixin transitionForAll($time: 0.3s, $transProp: ease) {
+    -webkit-transition: all $time $transProp;
+    -moz-transition: all $time $transProp;
+    -o-transition: all $time $transProp;
+    transition: all $time $transProp;
+    transition: all $time $transProp;
+}

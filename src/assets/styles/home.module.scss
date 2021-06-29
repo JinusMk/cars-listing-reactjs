@@ -1,0 +1,24 @@
+@import 'variable';
+
+body{
+    .homeSection{
+        .homeContainer{
+            .tabBlk{
+                .tabListWrapper{
+                    .tabList{
+                        list-style: none;
+                        .tabItem{
+                        
+                        }
+                    }
+                    &.subCategoriesTab{
+
+                    }
+                    &.categoriesTab{
+
+                    }
+                }
+            }
+        }
+    }
+}

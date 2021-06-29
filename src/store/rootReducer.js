@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
-import sharedReducers from '../shared_elements/reducer'
+import sharedReducer from '../shared_elements/reducer'
 
 const rootReducer = combineReducers({
-  sharedReducers
+  sharedReducer
 });
 export default rootReducer
