@@ -7,7 +7,7 @@ import styles from '../../../assets/styles/favourites.module.scss'
 function Favourites(props){
     const [cars, setCars] = useState([])
     const [limit, setLimit] = useState(8)
-
+    
     const handleUpdateFavourites = (carId) => {
         let updatedCar = cars.find(car => car.id === carId)
         updatedCar.isFavourite = !updatedCar.isFavourite
