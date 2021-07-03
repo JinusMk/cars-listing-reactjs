@@ -9,11 +9,11 @@ body {
         z-index: 999;
         width: 100%;
         background: $color_052724;
-        .container{
+        .headerContainer{
             // max-width: 959px;
             .headerWrapper{
                 .headerRow{
-                    padding: 24px;
+                    padding: 24px 32px;
                     box-sizing: border-box;
                     .logoBlk{
                         float: left;
@@ -134,22 +134,98 @@ body {
         border-radius: 4px;
         margin-top: 24px;
     }
+    .bottomNavigation{
+        padding: 12px 16px 8px;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        background: $white;
+        width: 100%;
+        box-sizing: border-box;
+        box-shadow: 0 -1px 4px rgba(0,0,0,0.1);
+        ul{
+            li{
+                width: 50%;
+                text-align: center;
+                a{
+                    span{
+                        display: block;
+                        color: $gray;
+                    }
+                    .activeImg{
+                        display: none;
+                    }
+                }
+                &.active{
+                    a{
+                        span{
+                            color: $primary;
+                            font-weight: $boldFont;
+                        }
+                        .inActiveImg{
+                            display: none;
+                        }
+                        .activeImg{
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media (min-width: 0px) and ( max-width: 599px){
     body{
-
+        header{
+            .headerContainer{
+                .headerWrapper{
+                    .headerRow{
+                        padding: 21px 24px;
+                        .logoBlk{
+                            float: none;
+                            text-align: center;
+                        }
+                        .navigationList{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        main{
+            padding: 24px 0px;
+        }
+        .carItemWrapper{
+            &:hover{
+                transform: none;
+            }
+        }
     }
 }
 
 @media (min-width: 600px) and (max-width: 959px) {
     body{
-
+        main{
+            padding: 24px 16px;
+        }
+        .carItemWrapper{
+            &:hover{
+                transform: none;
+            }
+        }
     }
 }
 
 @media (min-width: 960px) and (max-width: 1279px) {
     body{
-
+        main{
+            padding: 24px 16px;
+        }
+        .carItemWrapper{
+            &:hover{
+                transform: none;
+            }
+        }
     }
 }

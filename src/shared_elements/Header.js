@@ -9,7 +9,7 @@ export default function Header(props){
     return(
         <>
             <header>
-                <div className="container">
+                <div className="headerContainer">
                     <div className="headerWrapper">
                         <div className="headerRow">
                             <div className="logoBlk">
