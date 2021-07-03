@@ -24,7 +24,7 @@ class ErrorBoundary extends Component {
             return (
                 <section className="errorBoundarySection">
                     <div className="errorBoundary flexCentered">
-                        <div className="contentWrapper">
+                        <div className="contentWrapper textCenter">
                             {/* <img src={imageBasePath + 'oops.jpg'} /> */}
                             <h3 className="heading3">Oops..! Something went wrong.</h3>
                             <p className="paragraph">An error occurred. Please try again later.</p>

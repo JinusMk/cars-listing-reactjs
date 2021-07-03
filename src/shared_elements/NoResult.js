@@ -1,11 +1,13 @@
 import { Link } from 'react-router-dom'
+import NoResultImg from '../assets/images/no-result-img.svg'
 
 export default function NoResult(props){
-    const { title, description="", btnText, link } = props
+    const { title, description="", btnText, link, image } = props
     return(
         <div className="noResultWrapper flexCentered">
-            <div className="contentWrapper">
-                <h3 className="heading3">{title}</h3>
+            <div className="contentWrapper textCenter">
+                <img src={image ? image : NoResultImg} alt="noResult"/>
+                <h3 className="heading2">{title}</h3>
                 { 
                     description ? <p className="paragraph">{description}</p>: null}
                 {
