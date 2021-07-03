@@ -1,51 +1,52 @@
 @import 'variable';
 
 body{
+    margin: 0;
     * {
         margin: 0;
         padding: 0;
     }
     word-break: break-word;
     @include fontStyle(
-        $fontFamily: $font_OpenSans,
+        $fontFamily: $font_inter,
         $size: $font14,
         $weight: $regularFont,
-        $color: $gray,
+        $color: $primary,
         $lineHeight: 21px
     );
     .heading1{
         @include fontStyle(
-          $fontFamily: $font_OpenSans,
+          $fontFamily: $font_inter,
           $size: $font24,
           $weight: $boldFont,
-          $color: $gray,
+          $color: $primary,
           $lineHeight: 27px
         );
     }
     .heading2{
         @include fontStyle(
-          $fontFamily: $font_OpenSans,
+          $fontFamily: $font_inter,
           $size: $font18,
           $weight: $semiBoldFont,
-          $color: $gray,
+          $color: $primary,
           $lineHeight: 24px
         );
     }
     .heading3{
         @include fontStyle(
-          $fontFamily: $font_OpenSans,
+          $fontFamily: $font_inter,
           $size: $font16,
           $weight: $semiBoldFont,
-          $color: $gray,
+          $color: $primary,
           $lineHeight: 21px
         );
     }
     .paragraph{
         @include fontStyle(
-          $fontFamily: $font_OpenSans,
+          $fontFamily: $font_inter,
           $size: $font14,
           $weight: $regularFont,
-          $color: $gray,
+          $color: $primary,
           $lineHeight: 21px
         );
     }
@@ -62,6 +63,9 @@ body{
             cursor: pointer;
             outline: 0;
         }
+    }
+    .textCenter{
+      text-align: center;
     }
     .flexCentered{
         display: flex;

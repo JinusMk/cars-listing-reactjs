@@ -4,18 +4,112 @@ body{
     .homeSection{
         .homeContainer{
             .tabBlk{
+                // position: sticky;
+                // top: 69px;
+                // background: $color_bg;
+                // z-index: 999;
+                // padding: 24px 0 8px 0;
                 .tabListWrapper{
                     .tabList{
                         list-style: none;
                         .tabItem{
-                        
+                            
                         }
                     }
-                    &.subCategoriesTab{
-
-                    }
                     &.categoriesTab{
-
+                        margin-bottom: 24px;
+                        .tabList{
+                            border-bottom: 1px solid #e5e5e5;
+                            .tabItem{
+                                padding: 0 16px;
+                                width: auto;
+                                a{
+                                    @include transitionForAll($time: 0.4s, $transProp: ease-out);
+                                    display: inline-block;
+                                    color: $color_80aaa4;
+                                    // font-weight: $mediumFont;
+                                    text-transform: uppercase;
+                                    span{
+                                        padding-bottom: 8px;
+                                        display: inline-block;
+                                    }
+                                    &::after{
+                                        content: "";
+                                        border-top: 4px solid transparent;
+                                        border-top-left-radius: 6px;
+                                        border-top-right-radius: 6px;
+                                        display: block;
+                                        position: relative;
+                                        top: 1px;
+                                    }
+                                }
+                                &.active{
+                                    a{
+                                        color: $primary;
+                                        // font-weight: $semiBoldFont;
+                                        &::after{
+                                            border-top: 4px solid $color_active;
+                                        }
+                                    }
+                                }
+                                &:hover{
+                                    a{
+                                        color: $primary;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.subCategoriesTab {
+                        margin-bottom: 24px;
+                        .tabList{
+                            .tabItem{
+                                padding: 0 12px;
+                                width: auto;
+                                a{
+                                    padding: 8px 12px;
+                                    border: 1px solid $light_gray;
+                                    @include transitionForAll($time: 0.4s, $transProp: ease-out);
+                                    border-radius: 4px;
+                                    color: $color_80aaa4;
+                                    display: inline-block;
+                                    text-transform: capitalize;
+                                }
+                                &:active{
+                                    a{
+                                        border: 1px solid $primary;
+                                        color: $primary;
+                                    }
+                                }
+                                &:hover{
+                                    a{
+                                        border: 1px solid $primary;
+                                        color: $primary;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .contentBlk{
+                .carsListingOuterWrapper{
+                    display: flex;
+                    flex-flow: row wrap;
+                    .cardWrapper{
+                        flex-basis: 25%;
+                        flex-grow: 0;
+                        max-width: 25%;
+                        padding: 12px;
+                        box-sizing: border-box;
+                    }
+                    .loadMoreBtn{
+                        width: 100%;
+                        padding: 8px 12px;
+                        border: 1px solid $primary;
+                        cursor: pointer;
+                        border-radius: 4px;
+                        margin-top: 24px;
                     }
                 }
             }

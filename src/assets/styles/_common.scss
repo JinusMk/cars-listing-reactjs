@@ -55,6 +55,40 @@ body {
     }
     main{
         padding: 24px 32px;
+        background: $color_bg;
+        min-height: 100vh;
+    }
+    .carItemWrapper{
+        background: $white;
+        padding: 16px;
+        border-radius: 4px;
+        border: 1px solid $light_gray;
+        height: 100%;
+        box-sizing: border-box;
+        @include transitionForAll($time: 0.4s, $transProp: ease-out);
+        .featuredImg{
+            width: 100%;
+            height: 200px;
+            margin-bottom: 16px;
+            border-radius: 4px 4px 0 0;
+        }
+        h3{
+            position: relative;
+            padding: 0 32px 8px 0;
+            img, span{
+                vertical-align: middle;
+            }
+            img{
+                position: absolute;
+                right: 0;
+                top: 0;
+                cursor: pointer;
+            }
+        }
+        &:hover{
+            transform: scale(1.05);
+            box-shadow: 0 2px 16px 4px rgba(40,44,63, 0.07);
+        }
     }
 }
 
