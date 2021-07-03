@@ -1,4 +1,8 @@
 import { Link, useLocation } from 'react-router-dom'
+import homeActive from '../assets/images/home_active.svg'
+import homeInActive from '../assets/images/home_inactive.svg'
+import favouritesInActive from '../assets/images/favourites_inactive.svg'
+import favouritesActive from '../assets/images/favourites_active.svg'
 
 export default function Header(props){
     let location = useLocation()
@@ -17,10 +21,18 @@ export default function Header(props){
                             <nav role="navigation" className="navigationListOuterWrapper">
                                 <ul className="navigationList flexCentered listInline">
                                     <li>
-                                        <Link to="/" className={`navLink paragraph ${location.pathname === '/' ? 'active' : ''}`}>Home</Link>
+                                        <Link to="/" className={`navLink home paragraph ${location.pathname === '/' ? 'active' : ''}`}>
+                                            <img src={homeActive} className="activeImg"/>
+                                            <img src={homeInActive} className="inActiveImg"/>
+                                            <span>Home</span>
+                                        </Link>
                                     </li>
                                     <li>
-                                        <Link to="/favourites" className={`navLink paragraph ${location.pathname === '/favourites' ? 'active' : ''}`}>Favourites</Link>
+                                        <Link to="/favourites" className={`navLink paragraph ${location.pathname === '/favourites' ? 'active' : ''}`}>
+                                            <img src={favouritesActive} className="activeImg"/>
+                                            <img src={favouritesInActive} className="inActiveImg"/>
+                                            <span>Favourites</span>
+                                        </Link>
                                     </li>
                                 </ul>
                             </nav>

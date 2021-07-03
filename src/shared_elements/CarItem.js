@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import favActive from '../assets/images/favourite_active.svg'
-import favInActive from '../assets/images/favourite_inactive.svg'
+import likeActive from '../assets/images/like_active.svg'
+import likeInActive from '../assets/images/like_inactive.svg'
 
 export default function CarItem(props){
     const [imgLoader, setImgLoader] = useState(true)
@@ -11,7 +11,7 @@ export default function CarItem(props){
             {imgLoader ? <div className="featuredImg imgSkeleton"/> : null}
             <h3 className="heading2">
                 <span>{car.name}</span>
-                {car.isFavourite ? <img src={favActive} alt="active" className={`favIcon`}onClick={() => props.handleUpdateFavourites(car.id)}/> : <img src={favInActive} alt="inactive" className={`favIcon`} onClick={() => props.handleUpdateFavourites(car.id)}/>}
+                {car.isFavourite ? <img src={likeActive} alt="active" className={`favIcon`}onClick={() => props.handleUpdateFavourites(car.id)}/> : <img src={likeInActive} alt="inactive" className={`favIcon`} onClick={() => props.handleUpdateFavourites(car.id)}/>}
             </h3>
         </div>
     )

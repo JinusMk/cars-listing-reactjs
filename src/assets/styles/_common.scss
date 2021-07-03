@@ -6,12 +6,11 @@ body {
         right: 0;
         top: 0;
         left: 0;
-        background: $white;
         z-index: 999;
         width: 100%;
-        background: $primary;
+        background: $color_052724;
         .container{
-            max-width: 959px;
+            // max-width: 959px;
             .headerWrapper{
                 .headerRow{
                     padding: 24px;
@@ -30,13 +29,41 @@ body {
                             li{
                                 .navLink{
                                     @include transitionForAll($time: 0.4s, $transProp: ease-out);
-                                    padding: 8px 16px;
+                                    padding: 10px 16px;
                                     border-radius: 8px;
-                                    color: $white;
-                                    border: 1px solid $white;
+                                    span{
+                                        color: $white;
+                                        font-weight: $boldFont;
+                                    }
+                                    .activeImg{
+                                        display: none;
+                                    }
+                                    .inActiveImg{
+                                        display: inline-block;
+                                    }
+                                    span, img{
+                                        vertical-align: middle;
+                                    }
+                                    img{
+                                        margin-right: 8px;
+                                        width: 24px;
+                                    }
+                                    &.home{
+                                        img{
+                                            margin-top: -5px;
+                                        }
+                                    }
                                     &:hover, &.active{
                                         background: $white;
-                                        color: $primary;
+                                        .activeImg{
+                                            display: inline-block;
+                                        }
+                                        .inActiveImg{
+                                            display: none;
+                                        }
+                                        span{
+                                            color: $primary;
+                                        }
                                     }
                                 }
                                 margin-right: 32px;
