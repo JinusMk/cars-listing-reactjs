@@ -75,7 +75,7 @@ body{
                                     display: inline-block;
                                     text-transform: capitalize;
                                 }
-                                &:active{
+                                &.active{
                                     a{
                                         border: 1px solid $primary;
                                         color: $primary;
@@ -83,7 +83,6 @@ body{
                                 }
                                 &:hover{
                                     a{
-                                        border: 1px solid $primary;
                                         color: $primary;
                                     }
                                 }
@@ -102,6 +101,29 @@ body{
                         max-width: 25%;
                         padding: 12px;
                         box-sizing: border-box;
+                        &.cardSkeleton{
+                            .carItemWrapper{
+                                .imgSkeleton{
+                                    background: rgba(0, 0, 0, 0.11);
+                                }
+                                h3{
+                                    .title{
+                                        display: inline-block;
+                                        height: 25px;
+                                        background: rgba(0, 0, 0, 0.11);
+                                        width: 80%;
+                                    }
+                                    .icon{
+                                        height: 25px;
+                                        background: rgba(0, 0, 0, 0.11);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .noResultWrapper{
+                        min-height: 70vh;
+                        width: 100%;
                     }
                     .loadMoreBtn{
                         width: 100%;

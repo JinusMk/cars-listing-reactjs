@@ -56,7 +56,7 @@ body {
     main{
         padding: 24px 32px;
         background: $color_bg;
-        min-height: 100vh;
+        min-height: 90vh;
     }
     .carItemWrapper{
         background: $white;
@@ -75,13 +75,14 @@ body {
         h3{
             position: relative;
             padding: 0 32px 8px 0;
-            img, span{
+            .favIcon, span{
                 vertical-align: middle;
             }
-            img{
+            .favIcon{
                 position: absolute;
                 right: 0;
                 top: 0;
+                width: 25px;
                 cursor: pointer;
             }
         }
@@ -89,6 +90,10 @@ body {
             transform: scale(1.05);
             box-shadow: 0 2px 16px 4px rgba(40,44,63, 0.07);
         }
+    }
+    .noResultWrapper{
+        justify-content: center;
+        height: 100%;
     }
 }
 

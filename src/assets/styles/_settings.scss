@@ -50,6 +50,15 @@ body{
           $lineHeight: 21px
         );
     }
+    .supportText{
+      @include fontStyle(
+          $fontFamily: $font_inter,
+          $size: $font12,
+          $weight: $regularFont,
+          $color: $light_gray,
+          $lineHeight: 21px
+        );
+    }
     .primaryBtn{
 
     }

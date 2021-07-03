@@ -9,7 +9,7 @@ export default function CarItem(props){
             <img src={car.photo} alt="img" className="featuredImg"/>
             <h3 className="heading2">
                 <span>{car.name}</span>
-                {car.isFavourite ? <img src={favActive} alt="active" onClick={() => props.handleUpdateFavourites(car.id)}/> : <img src={favInActive} alt="inactive" onClick={() => props.handleUpdateFavourites(car.id)}/>}
+                {car.isFavourite ? <img src={favActive} alt="active" className={`favIcon`}onClick={() => props.handleUpdateFavourites(car.id)}/> : <img src={favInActive} alt="inactive" className={`favIcon`} onClick={() => props.handleUpdateFavourites(car.id)}/>}
             </h3>
         </div>
     )
