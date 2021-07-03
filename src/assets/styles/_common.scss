@@ -13,7 +13,7 @@ body {
             // max-width: 959px;
             .headerWrapper{
                 .headerRow{
-                    padding: 24px 32px;
+                    padding: 24px 48px;
                     box-sizing: border-box;
                     .logoBlk{
                         float: left;
@@ -210,6 +210,15 @@ body {
 
 @media (min-width: 600px) and (max-width: 959px) {
     body{
+        header{
+            .headerContainer{
+                .headerWrapper{
+                    .headerRow{
+                        padding: 24px 32px;
+                    }
+                }
+            }
+        }
         main{
             padding: 24px 16px;
         }
