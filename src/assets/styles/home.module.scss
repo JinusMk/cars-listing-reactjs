@@ -61,7 +61,7 @@ body{
                         }
                     }
                     &.subCategoriesTab {
-                        margin-bottom: 24px;
+                        margin-bottom: 12px;
                         .tabList{
                             .tabItem{
                                 padding: 0 12px;
@@ -138,10 +138,13 @@ body{
                 .tabBlk{
                     .tabListWrapper{
                         &.subCategoriesTab{
-                            margin-bottom: 8px;
+                            margin-bottom: 0px;
                             .tabList{
                                 .tabItem{
                                     padding: 0 0 12px 12px;
+                                    a{
+                                        padding: 6px 10px;
+                                    }
                                 }
                             }
                         }
@@ -168,7 +171,7 @@ body{
                 .tabBlk{
                     .tabListWrapper{
                         &.subCategoriesTab{
-                            margin-bottom: 8px;
+                            margin-bottom: 0px;
                             .tabList{
                                 .tabItem{
                                     padding: 0 0 12px 12px;

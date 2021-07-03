@@ -6,6 +6,8 @@ import Favourites from './features/favourites/containers/Favourites'
 import { useEffect } from 'react';
 import { fetchCarsList } from './shared_elements/actionCreators'
 import { pageLayoutHoc } from './hocs'
+import ErrorBoundary from './ErrorBoundary'
+import PageNotFound from './PageNotFound'
 import './assets/styles/app.scss';
 
 const store = configureStore();
@@ -18,10 +20,13 @@ function App() {
     <div className="">
         <Provider store={store}>
             <Router>
-                <Switch>
-                    <Route exact path={'/'} component={pageLayoutHoc(Home)} key={'home'}/>
-                    <Route exact path={'/favourites'} component={pageLayoutHoc(Favourites)} key={`favourites`}/>
-                </Switch>
+              <ErrorBoundary>
+                  <Switch>
+                      <Route exact path={'/'} component={pageLayoutHoc(Home)} key={'home'}/>
+                      <Route exact path={'/favourites'} component={pageLayoutHoc(Favourites)} key={`favourites`}/>
+                      <Route path='*' exact={true} component={PageNotFound} />
+                  </Switch>
+                </ErrorBoundary>
             </Router>
         </Provider>
     </div>

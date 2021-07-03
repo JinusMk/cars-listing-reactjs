@@ -6,8 +6,7 @@ import styles from '../../../assets/styles/favourites.module.scss'
 
 function Favourites(props){
     const [cars, setCars] = useState([])
-    const [limit, setLimit] = useState(12)
-    const [loader, setLoader] = useState(false)
+    const [limit, setLimit] = useState(8)
 
     const handleUpdateFavourites = (carId) => {
         let updatedCar = cars.find(car => car.id === carId)
@@ -16,7 +15,7 @@ function Favourites(props){
         props.updateCars(updatedCars)
     }
     const handleLoadMore = () => {
-        setLimit(limit + 10)
+        setLimit(limit + 8)
     }
     useEffect(() => {
         setCars(props.carsList.filter(car => car.isFavourite))

@@ -15,7 +15,7 @@ export default function Header(props){
                             <div className="logoBlk">
                                 <h3 className="heading1">
                                     {/* <img src */}
-                                    <span>ZOKO Cars</span>
+                                    <span>ZOKO cars</span>
                                 </h3>
                             </div>
                             <nav role="navigation" className="navigationListOuterWrapper">

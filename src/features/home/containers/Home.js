@@ -11,7 +11,7 @@ function Home(props){
     const [categoryId, setCategoryId] = useState(0)
     const [subCategoryIds, setSubCategoryIds] = useState([])
     const [loader, setLoader] = useState(true)
-    const [limit, setLimit] = useState(12)
+    const [limit, setLimit] = useState(8)
     const [cars, setCars] = useState([])
 
     const fetchCategories = () => {
@@ -33,22 +33,19 @@ function Home(props){
         })
     }
     const handleChangeCategory = (id) => {
-        // debugger
-        setCategoryId(id)
-        setSubCategoryIds([])
-        if(id == 11 && !subCategories[id]){ //sedan
-            fetchSubCategories(id, `https://run.mocky.io/v3/4d1d1033-b9b2-4f65-ac78-0bdd210c1abb`)
-        }else if(id == 13 && !subCategories[id]){ //suv
-            fetchSubCategories(id, `https://run.mocky.io/v3/701a0454-ddb4-40e5-8ef1-86b870c6653f`)
-        }
-        if(id){
-            setCars(props.carsList.filter(car => car.catId === id))
-        }else{
-            setCars(props.carsList)
+        if(id != categoryId){
+            setCategoryId(id)
+            setSubCategoryIds([])
+            setLimit(8)
+            if(id == 11 && !subCategories[id]){ //sedan
+                fetchSubCategories(id, `https://run.mocky.io/v3/4d1d1033-b9b2-4f65-ac78-0bdd210c1abb`)
+            }else if(id == 13 && !subCategories[id]){ //suv
+                fetchSubCategories(id, `https://run.mocky.io/v3/701a0454-ddb4-40e5-8ef1-86b870c6653f`)
+            }
+            setCars(props.carsList.filter(car => id ? car.catId === id : true))
         }
     }
     const handleChangeSubCategory = (id) => {
-        // setSubCategoryIds(id)
         if(id === 'all'){
             setSubCategoryIds([])
             setCars(props.carsList.filter(car => car.catId === categoryId))
@@ -69,7 +66,7 @@ function Home(props){
         }
     }
     const handleLoadMore = () => {
-        setLimit(limit + 10)
+        setLimit(limit + 8)
     }
     const handleUpdateFavourites = (carId) => {
         let updatedCar = cars.find(car => car.id === carId)
@@ -136,10 +133,10 @@ function Home(props){
                                 />
                             </div>
                         }
-                        {
-                            loader ? '' : cars.length >= limit  ? <div className={'loadMoreBtn secondaryBtn textCenter'} onClick={handleLoadMore}>Load more</div> : null
-                        }
                     </div>
+                    {
+                        loader ? '' : cars.length > limit  ? <div className={'loadMoreBtn secondaryBtn textCenter'} onClick={handleLoadMore}>Load more</div> : null
+                    }
                 </div>
             </div>
         </section>

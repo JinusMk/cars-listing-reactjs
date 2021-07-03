@@ -60,7 +60,30 @@ body{
         );
     }
     .primaryBtn{
-
+      @include fontStyle(
+        $fontFamily: $font_inter,
+        $size: $font14,
+        $weight: $semiBoldFont,
+        $color: $white,
+        $lineHeight: 16px
+      );
+      background: $primary;
+      @include transitionForAll($time: 0.4s, $transProp: ease-out);
+      padding: 10px 36px;
+      outline: none;
+      text-align: center;
+      display: inline-block;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+      text-transform: capitalize;
+      &:hover,
+      &:focus,
+      &:active {
+        @include transitionForAll($time: 0.3s, $transProp: ease-in);
+        outline: none;
+        background: $color_052724;
+      }
     }
     a{
         text-decoration: none;
