@@ -137,7 +137,7 @@ function Home(props){
                             </div>
                         }
                         {
-                            loader ? '' : cars.length >= limit  ? <div className={styles.loadMoreBtn + ' secondaryBtn textCenter'} onClick={handleLoadMore}>Load more</div> : null
+                            loader ? '' : cars.length >= limit  ? <div className={'loadMoreBtn secondaryBtn textCenter'} onClick={handleLoadMore}>Load more</div> : null
                         }
                     </div>
                 </div>

@@ -39,7 +39,7 @@ function Favourites(props){
                             </div>
                         }
                         {
-                            cars.length >= limit  ? <div className={styles.loadMoreBtn + ' secondaryBtn textCenter'} onClick={handleLoadMore}>Load more</div> : null
+                            cars.length >= limit  ? <div className={'loadMoreBtn secondaryBtn textCenter'} onClick={handleLoadMore}>Load more</div> : null
                         }
                     </div>
                 </div>

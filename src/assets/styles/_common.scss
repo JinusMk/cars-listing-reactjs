@@ -71,6 +71,9 @@ body {
             height: 200px;
             margin-bottom: 16px;
             border-radius: 4px 4px 0 0;
+            &.imgSkeleton{
+                background: rgba(0, 0, 0, 0.11);
+            }
         }
         h3{
             position: relative;
@@ -94,6 +97,15 @@ body {
     .noResultWrapper{
         justify-content: center;
         height: 100%;
+    }
+    .loadMoreBtn{
+        width: 50%;
+        margin: 0 auto;
+        padding: 8px 12px;
+        border: 1px solid $primary;
+        cursor: pointer;
+        border-radius: 4px;
+        margin-top: 24px;
     }
 }
 
