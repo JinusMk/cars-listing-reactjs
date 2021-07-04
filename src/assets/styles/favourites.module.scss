@@ -3,19 +3,26 @@
 body{
     .favouritesSection{
         .favouritesContainer{
-            .carsListingOuterWrapper{
-                display: flex;
-                flex-flow: row wrap;
-                .cardWrapper{
-                    flex-basis: 25%;
-                    flex-grow: 0;
-                    max-width: 25%;
-                    padding: 12px;
-                    box-sizing: border-box;
-                }
-                .noResultWrapper{
-                    min-height: calc(100vh - 120px);
-                    width: 100%;
+            .titleBlk{
+                border-bottom: 1px solid $light_gray;
+                padding: 0 16px 16px 16px;
+                margin-bottom: 16px;
+            }
+            .contentBlk{
+                .carsListingOuterWrapper{
+                    display: flex;
+                    flex-flow: row wrap;
+                    .cardWrapper{
+                        flex-basis: 25%;
+                        flex-grow: 0;
+                        max-width: 25%;
+                        padding: 12px;
+                        box-sizing: border-box;
+                    }
+                    .noResultWrapper{
+                        min-height: calc(100vh - 222px);
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -25,11 +32,18 @@ body{
     body{
         .favouritesSection{
             .favouritesContainer{
-                .carsListingOuterWrapper{
-                    .cardWrapper{
-                        flex-basis: 100%;
-                        flex-grow: 0;
-                        max-width: 100%;
+                .titleBlk{
+                    border-bottom: 1px solid $light_gray;
+                    padding: 0 16px 16px 16px;
+                    margin-bottom: 12px;
+                }
+                .contentBlk{
+                    .carsListingOuterWrapper{
+                        .cardWrapper{
+                            flex-basis: 100%;
+                            flex-grow: 0;
+                            max-width: 100%;
+                        }
                     }
                 }
             }
@@ -40,11 +54,13 @@ body{
     body{
         .favouritesSection{
             .favouritesContainer{
-                .carsListingOuterWrapper{
-                    .cardWrapper{
-                        flex-basis: 50%;
-                        flex-grow: 0;
-                        max-width: 50%;
+                .contentBlk{
+                    .carsListingOuterWrapper{
+                        .cardWrapper{
+                            flex-basis: 50%;
+                            flex-grow: 0;
+                            max-width: 50%;
+                        }
                     }
                 }
             }
@@ -55,11 +71,13 @@ body{
     body{
         .favouritesSection{
             .favouritesContainer{
-                .carsListingOuterWrapper{
-                    .cardWrapper{
-                        flex-basis: 33.33%;
-                        flex-grow: 0;
-                        max-width: 33.33%;
+                .contentBlk{
+                    .carsListingOuterWrapper{
+                        .cardWrapper{
+                            flex-basis: 33.33%;
+                            flex-grow: 0;
+                            max-width: 33.33%;
+                        }
                     }
                 }
             }

@@ -23,6 +23,9 @@ function Favourites(props){
     return(
         <section className={styles.favouritesSection}>
             <div className={styles.favouritesContainer}>
+                <div className={styles.titleBlk}>
+                    <h3 className="heading3">Favourites</h3>
+                </div>
                 <div className={styles.contentBlk}>
                     <div className={styles.carsListingOuterWrapper}>
                         {
@@ -33,7 +36,7 @@ function Favourites(props){
                                 />
                             </div>) : <div className={styles.noResultWrapper}>
                                 <NoResult
-                                    title={`Your favourites list is empty!`}
+                                    title={`Favourites list is empty!`}
                                 />
                             </div>
                         }

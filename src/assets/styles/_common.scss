@@ -234,7 +234,7 @@ body {
         }
         main{
             padding: 16px 0px 86px;
-            min-height: calc(100vh - 156px);
+            min-height: calc(100vh - 172px);
         }
         .carItemWrapper{
             &:hover{
@@ -268,6 +268,15 @@ body {
 
 @media (min-width: 960px) and (max-width: 1279px) {
     body{
+        header{
+            .headerContainer{
+                .headerWrapper{
+                    .headerRow{
+                        padding: 23px 32px;
+                    }
+                }
+            }
+        }
         main{
             padding: 24px 16px;
         }

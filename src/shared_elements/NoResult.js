@@ -7,7 +7,7 @@ export default function NoResult(props){
         <div className="noResultWrapper flexCentered">
             <div className="contentWrapper textCenter">
                 <img src={image ? image : NoResultImg} alt="noResult"/>
-                <h3 className="heading2">{title}</h3>
+                <h3 className="heading3">{title}</h3>
                 { 
                     description ? <p className="paragraph">{description}</p>: null}
                 {
