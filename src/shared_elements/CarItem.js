@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import likeActive from '../assets/images/like_active.svg'
 import likeInActive from '../assets/images/like_inactive.svg'
+import PropTypes from 'prop-types';
 
 export default function CarItem(props){
     const [imgLoader, setImgLoader] = useState(true)
@@ -15,4 +16,12 @@ export default function CarItem(props){
             </h3>
         </div>
     )
+}
+CarItem.propTypes = {
+    car: PropTypes.shape({
+        photo: PropTypes.string,
+        name: PropTypes.string,
+        isFavourite: PropTypes.bool
+    }),
+    handleUpdateFavourites: PropTypes.func.isRequired
 }
