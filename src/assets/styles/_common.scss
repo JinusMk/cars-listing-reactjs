@@ -83,7 +83,7 @@ body {
     main{
         padding: 24px 32px;
         background: $color_bg;
-        min-height: 90vh;
+        min-height: calc(100vh - 118px);
     }
     .carItemWrapper{
         background: $white;
@@ -187,7 +187,7 @@ body {
     }
     .errorBoundarySection{
         .errorBoundary{
-            min-height: 90vh;
+            min-height: 100vh;
             justify-content: center;
             .contentWrapper{
                 h3{
@@ -202,7 +202,7 @@ body {
     .pageNotFoundSection{
         .pageNotFound{
             .noResultWrapper{
-                min-height: 90vh;
+                min-height: 100vh;
                 img{
                     height: 100px;
                 }
@@ -234,6 +234,7 @@ body {
         }
         main{
             padding: 16px 0px 70px;
+            min-height: calc(100vh - 156px);
         }
         .carItemWrapper{
             &:hover{

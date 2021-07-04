@@ -1,22 +1,23 @@
 
-import { Component } from 'react'
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import { Header, BottomNavigation } from '../shared_elements'
 
 export default function pageLayoutHoc(HocComponent, extraProps = {}) {
-    class PageLayout extends Component {
-        render(){
-            return(
-                <>
-                    <Header />
-                    <main>
-                        <div>
-                            <HocComponent />
-                        </div>
-                    </main>
-                    <BottomNavigation />
-                </>
-            )
-        }
+    function PageLayout(props){
+        const { pathname } = useLocation()
+        useEffect(() => {
+            window.scrollTo(0, 0);
+        }, [pathname]);
+        return(
+            <>
+                <Header />
+                <main>
+                    <HocComponent />
+                </main>
+                <BottomNavigation />
+            </>
+        )
     }
     return PageLayout
 }
