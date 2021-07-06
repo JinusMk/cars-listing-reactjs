@@ -72,6 +72,8 @@ function Home(props){
         let updatedCar = cars.find(car => car.id === carId)
         updatedCar.isFavourite = !updatedCar.isFavourite
         let updatedCars = props.carsList.map(car => car.id === carId ? updatedCar : car)
+        let favIds = updatedCars.filter(car => car.isFavourite).map(car => car.id)
+        localStorage.setItem('favIds', JSON.stringify(favIds))
         props.updateCars(updatedCars)
     }
     useEffect(() => {
@@ -83,6 +85,7 @@ function Home(props){
         }else if(subCategoryIds && subCategoryIds.length){
             setCars(props.carsList.filter(car => car.catId === categoryId && subCategoryIds.includes(car.subCatId)))
         }else{
+            // setCars(props.carsList.filter(car => car.catId === categoryId).sort((a, b) =>  a.name > b.name ? -1 : a.name < b.name ? 1 : 0))
             setCars(props.carsList.filter(car => car.catId === categoryId))
         }
     }, [props.carsList])

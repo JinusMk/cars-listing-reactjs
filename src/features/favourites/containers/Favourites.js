@@ -12,6 +12,8 @@ function Favourites(props){
         let updatedCar = cars.find(car => car.id === carId)
         updatedCar.isFavourite = !updatedCar.isFavourite
         let updatedCars = props.carsList.map(car => car.id === carId ? updatedCar : car)
+        let favIds = updatedCars.filter(car => car.isFavourite).map(car => car.id)
+        localStorage.setItem('favIds', JSON.stringify(favIds))
         props.updateCars(updatedCars)
     }
     const handleLoadMore = () => {
